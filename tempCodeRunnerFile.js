@@ -1,11 +1,25 @@
-let arr = [1,2,3,4,5,6,7,8];
-for (let i = 0; i < arr.length; i++) {
+function addEvenOdd (...num) {
 
-    for (let j = i + 1; j < arr.length; j++) {
 
-        if (arr[i] + arr[j] === 10) {
-            return [arr[i], arr[j]];
-        }
 
-    }
-}
+    
+//         let totalOdd = num.filter(item => item %2 !==0).reduce((a,b) =>a + b );
+        
+    
+
+    
+//         let totalEven = num.filter(item => item %2 ===0).reduce((a,b) => a + b );
+ 
+
+   
+//       let Diff = totalOdd - totalEven;
+
+//       return Diff;
+    
+
+
+
+
+// }
+
+// console.log(addEvenOdd(...[1,2,3]));

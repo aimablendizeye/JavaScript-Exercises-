@@ -7,25 +7,14 @@
 
 function addEvenOdd (...num) {
 
-
-
-    
         let totalOdd = num.filter(item => item %2 !==0).reduce((a,b) =>a + b );
-        
-    
-
-    
+         
         let totalEven = num.filter(item => item %2 ===0).reduce((a,b) => a + b );
  
-
-   
       let Diff = totalOdd - totalEven;
 
       return Diff;
     
-
-
-
 
 }
 
@@ -81,7 +70,7 @@ function isMirrorImage (str1 , str2) {
     return format(str1) === format(str2);
 }
 
-// console.log(isMirrorImage("listen", "silent"))
+console.log(isMirrorImage("listen", "silent"))
 
 console.log(isMirrorImage("Test", "tseT "));
 
@@ -129,7 +118,7 @@ console.log(highAndLow([1, 2, 3, 4, 5]));
 
 //Q  4
 
-// Function that adds only even numbers 
+//Function that adds only even numbers 
 
 function sum (arr) {
     let sum =0;
@@ -144,6 +133,54 @@ function sum (arr) {
 }
 
 console.log(sum([4,5,3,6,3,5]));
+
+
+
+
+
+
+
+// Q5
+
+
+const notifications= [
+  { message:"You have a new message", delay:1000 },
+  { message:"Your download is ready", delay:3000 },
+  { message:"Battery is low", delay:2000 },
+  { message:"Friend is online", delay:4000 }
+];
+
+
+// ({message1,message2,message3,message4} = notifications) ;
+
+// setTimeout(()=>console.log(message1),1000);
+
+for (let messages of notifications) {
+    setTimeout (()=> console.log(messages.message),messages.delay);
+}
+
+
+
+
+
+// Q6
+
+
+function fullarr (arr1,arr2) {
+
+    let arr = [...arr1,...arr2];
+    arr.unshift(0);
+    arr.push(7);
+    return arr;
+
+}
+
+
+
+
+
+console.log(fullarr([1,2,3],[4,5,6]));
+
 
 
 
