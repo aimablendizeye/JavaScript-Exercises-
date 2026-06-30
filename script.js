@@ -211,12 +211,12 @@ function calcType(a, b, res) {
     return "multiplication"
   }
   else if (b === 0 ){
-    return `you can't divide by ${this.b}`
+    return `you can't divide by ${b}`
   }
   
 }
 
-console.log(calcType(3,5,-2));
+console.log(calcType(3,0,-2));
 
 
 
@@ -241,6 +241,32 @@ function lineupStudents(students){
   }
 
 console.log(lineupStudents ( 'Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi'))
+
+
+
+// Q 10 
+
+// The marketing team is spending way too much time typing in hashtags. Let's help them with our own Hashtag Generator! Here's the deal: It must start with a hashtag (#). All words must have their first letter capitalized, and remaining letters lowercased. If the final result is longer than 140 chars it must return false. If the input or the result is an empty string it must return false. do it in one line
+
+
+function generateHashtag (str) {
+  // 1. Clean the input and handle empty strings right away
+  const trimmed = str.trim();
+  if (trimmed === "") return false;
+
+  // 2. Map the capitalized words and join them with NO spaces ("")
+  let words = trimmed.split(/\s+/).map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join("");
+   
+  // 3. Assemble the final hashtag
+  let result = `#${words}`;
+
+  // 4. Validate final length constraint
+  return result.length > 140 ? false : result;
+}
+
+console.log(generateHashtag("Hello there thanks for trying my Kata")); 
+// Output: #HelloThereThanksForTryingMyKata
+
 
 
 
